@@ -1,7 +1,7 @@
 import unittest
 import math
 
-def find_multiples(limit):
+def find_multiples(limit: list) -> int:
     # This works fine for smaller number ranges but will take a considerable time when calculating larger ranges
     start = 1 if limit[0] == 0 else limit[0]
     end = limit[1]
@@ -17,7 +17,7 @@ def find_multiples(limit):
                 break
         current_number += 1
 
-def find_multiples2(limit):
+def find_multiples2(limit: list) -> int:
     # This is massively faster but a bit more complicated
     start = 1 if limit[0] == 0 else limit[0]
     end = limit[1]
@@ -42,7 +42,7 @@ def find_multiples2(limit):
 
     return math.prod(product)
 
-def find_prime_factors(n):
+def find_prime_factors(n: int) -> list:
     factors = []
     factor = 2
     while (n >= 2):
